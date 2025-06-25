@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llama Rush - ¡La Aventura Andina te Espera!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #F8F4E8;
+        }
+        .font-fredoka {
+            font-family: 'Fredoka One', cursive;
+        }
+        .hero-bg {
+            /* Ahora el fondo se define aquí */
+            background-image: url('Images/fondo-hero-andes.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-brand-primary { color: #F4C98C; }
+        .bg-brand-primary { background-color: #F4C98C; }
+        .text-brand-secondary { color: #DA3B27; }
+        .bg-brand-secondary { background-color: #DA3B27; }
+        .btn { transition: transform 0.2s, box-shadow 0.2s; }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .card { transition: transform 0.3s ease-in-out; }
+        .card:hover { transform: scale(1.05); }
+        .text-shadow-lg { text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="Images/logo-llama-rush-simple.png" alt="Logo de Llama Rush" class="h-12">
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg font-bold">
+                <a href="#about" class="hover:text-brand-secondary transition">El Juego</a>
+                <a href="#features" class="hover:text-brand-secondary transition">Características</a>
+                <a href="#how-to-play" class="hover:text-brand-secondary transition">Cómo Jugar</a>
+                <a href="#community" class="hover:text-brand-secondary transition">Comunidad</a>
+            </nav>
+            <a href="#download" class="hidden md:block bg-brand-secondary text-white font-bold py-2 px-6 rounded-full btn">
+                ¡Juega Ahora!
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 text-lg hover:text-brand-secondary">El Juego</a>
+            <a href="#features" class="block py-2 text-lg hover:text-brand-secondary">Características</a>
+            <a href="#how-to-play" class="block py-2 text-lg hover:text-brand-secondary">Cómo Jugar</a>
+            <a href="#community" class="block py-2 text-lg hover:text-brand-secondary">Comunidad</a>
+            <a href="#download" class="block mt-4 bg-brand-secondary text-white text-center font-bold py-2 px-6 rounded-full btn">
+                ¡Juega Ahora!
+            </a>
+        </div>
+    </header>
+
+    <main class="hero-bg">
+        <div class="bg-black/50">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center text-white">
+                <img src="Images/logo-llama-rush-completo.png" alt="Logo de Llama Rush Grande" class="mx-auto mb-6 h-48 w-48" >
+                <h1 class="text-5xl md:text-7xl font-fredoka text-shadow-lg">Llama Rush</h1>
+                <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto font-light">
+                    ¡La carrera más divertida y cultural por los Andes!
+                </p>
+                <div id="download" class="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#" class="btn">
+                        <img src="Images/boton-app-store.png" alt="Descargar en la App Store" class="h-16">
+                    </a>
+                    <a href="#" class="btn">
+                        <img src="Images/boton-google-play.png" alt="Disponible en Google Play" class="h-16">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-fredoka text-center mb-12">¿Qué es Llama Rush?</h2>
+             <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="Images/gameplay-llama-rush.png" alt="Gameplay de Llama Rush" class="rounded-2xl shadow-xl w-full card">
+                </div>
+                <div class="md:w-1/2">
+                   <h3 class="text-2xl font-bold mb-4">Una aventura <span class="text-brand-secondary">endless runner</span> única</h3>
+                    <p class="text-lg mb-4">
+                        <strong>Llama Rush</strong> es un emocionante juego móvil donde controlas a <strong>Killa</strong>, una llama increíblemente rápida que corre a través de hermosos paisajes inspirados en los Andes peruanos.
+                    </p>
+                    <p class="text-lg mb-4">
+                        Nuestra misión es llevar la riqueza de la cultura andina a todo el mundo a través de una experiencia de juego divertida, adictiva y accesible para todos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-to-play" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-fredoka text-center mb-12">¿Cómo se Juega?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                    <img src="Images/icono-deslizar.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de deslizar">
+                    <h3 class="text-2xl font-bold mb-2">DESLIZA</h3>
+                    <p>Usa tu dedo para mover a Killa de un carril a otro y para que se deslice por debajo de los obstáculos.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                    <img src="Images/icono-saltar.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de saltar">
+                    <h3 class="text-2xl font-bold mb-2">SALTA</h3>
+                    <p>Toca la pantalla para que Killa salte sobre rocas, cactus y otros peligros que encuentres en el camino.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                     <img src="Images/icono-coleccionar.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de coleccionar">
+                    <h3 class="text-2xl font-bold mb-2">COLECCIONA</h3>
+                    <p>No te olvides de recoger los power-ups culturales para obtener ventajas y alcanzar la máxima puntuación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-fredoka text-center mb-12">Características Principales</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg card">
+                    <img src="Images/icono-escenarios-andinos.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de montañas">
+                    <h3 class="text-2xl font-bold mb-2">Escenarios Andinos</h3>
+                    <p>Corre a través de paisajes vibrantes inspirados en la geografía de los Andes. ¡Cada carrera es una nueva postal!</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg card">
+                    <img src="Images/icono-power-ups.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de rayo">
+                    <h3 class="text-2xl font-bold mb-2">Power-ups Culturales</h3>
+                    <p>Recolecta "Chicha de Jora" para un impulso de velocidad o usa "Ponchos Mágicos" para ser invencible. ¡La cultura te da poder!</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg card">
+                     <img src="Images/icono-personaje-killa.png" class="mx-auto mb-4 h-20 w-20 rounded-full" alt="Icono de llama">
+                    <h3 class="text-2xl font-bold mb-2">Personaje Carismático</h3>
+                    <p>Juega como Killa, la llama con una bufanda roja. ¡Te enamorarás de su personalidad y sus divertidas animaciones!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-fredoka text-center mb-12">Lo que dicen nuestros jugadores</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <p class="text-lg italic">"¡Un juego súper adictivo y con unos gráficos hermosos! Me encanta que represente la cultura de mi país."</p>
+                    <p class="text-right font-bold mt-4">- Adrian A. (Estudiante de Videojuegos)</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <p class="text-lg italic">"Perfecto para jugar en el transporte público. Las partidas son rápidas y muy divertidas. ¡Recomendadísimo!"</p>
+                    <p class="text-right font-bold mt-4">- Maria M.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20 bg-brand-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-fredoka mb-6">¡Únete a la Manada!</h2>
+             <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Forma parte de nuestra increíble comunidad para recibir noticias, participar en eventos exclusivos y compartir tus mejores puntuaciones.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-4xl hover:text-gray-200 transition transform hover:scale-110">
+                    <img src="Images/icono-tiktok.png" alt="TikTok" class="h-12 w-12">
+                </a>
+                <a href="#" class="text-4xl hover:text-gray-200 transition transform hover:scale-110">
+                    <img src="Images/icono-instagram.png" alt="Instagram" class="h-12 w-12">
+                </a>
+                <a href="#" class="text-4xl hover:text-gray-200 transition transform hover:scale-110">
+                    <img src="Images/icono-discord.png" alt="Discord" class="h-12 w-12">
+                </a>
+                <a href="#" class="text-4xl hover:text-gray-200 transition transform hover:scale-110">
+                    <img src="Images/icono-youtube.png" alt="Youtube" class="h-12 w-12">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="merch" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-fredoka text-center mb-12">Lleva a Killa Contigo</h2>
+             <p class="text-xl text-center mb-10 max-w-2xl mx-auto text-gray-600">
+                Próximamente... ¡Nuestra línea de merchandising oficial para que muestres tu orgullo por Llama Rush!
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg card">
+                    <img src="Images/merch-peluche-killa.png" alt="Peluche de Killa la llama" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold">Peluches de Killa</h3>
+               </div>
+                 <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg card">
+                    <img src="Images/merch-camiseta-llama-rush.png" alt="Camiseta de Llama Rush" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold">Camisetas Exclusivas</h3>
+                </div>
+                 <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg card">
+                    <img src="Images/merch-stickers-llama-rush.png" alt="Stickers de Llama Rush" class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold">Stickers Divertidos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Llama Rush. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Desarrollado con pasión desde Perú.</p>
+             <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-brand-primary">Política de Privacidad</a>
+                <a href="#" class="hover:text-brand-primary">Términos de Servicio</a>
+                <a href="#" class="hover:text-brand-primary">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
